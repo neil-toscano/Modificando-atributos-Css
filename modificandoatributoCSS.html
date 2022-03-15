@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        #infor{
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+
+        .destacacursos{
+            background-color: green;
+        }
+        .informacion2{
+            background-color: yellow;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+
+           // $("a[href^='https://']").addClass("destacacursos");
+           document.getElementById("edu").addEventListener("click",resaltar,false);
+           document.getElementById("infor").addEventListener("click",resaltar2,false);
+           document.getElementById("remover").addEventListener("click",remover,false);
+
+        });
+
+        function resaltar(){
+            $(".cursos").addClass("destacacursos");
+            $(".informacion").removeClass("informacion2");
+        }
+        function resaltar2(){
+            $(".informacion").addClass("informacion2");
+            $(".cursos").removeClass("destacacursos");
+        }
+        function remover(){
+            $(".cursos").removeClass("destacacursos");
+            $(".informacion").removeClass("informacion2");
+        }
+    </script>
+</head>
+<body>
+
+    <button type="button" id="edu">educativas</button>
+    <button type="button" id="infor">informacion</button>
+    <button type="button" id="remover">remover</button>
+    <table>
+        <ul>
+            <li type="disc"> <a href="https://www.hazunaweb.com/curso-de-html/listas/" class="cursos"> Ver los "ul" y "ol"</a></li>
+            <li><a href="#" class="informacion">libreria JQuery</a></li>
+            <li><a href="https://devdocs.io/dom/eventtarget/addeventlistener" class="cursos">Jquery</a></li>
+        </ul>
+    </table>
+</body>
+</html>
