@@ -27,11 +27,13 @@
         });
 
         function resaltar(){
-            $(".cursos").toggleClass("destacacursos");
+            $(".cursos").addClass("destacacursos");
+            $(".informacion").removeClass("informacion2");
             
         }
         function resaltar2(){
-            $(".informacion").toggleClass("informacion2");
+            $(".informacion").addClass("informacion2");
+            $(".cursos").removeClass("destacacursos");
             
         }
         
@@ -40,14 +42,14 @@
 <body>
 
     <div>
-        <label for="edu">Educativas</label>
-        <input type="checkbox" id="edu" name="edu">
+        <label for="eduinfo">Educativas</label>
+        <input type="radio" id="edu" name="eduinfo">
     </div>
     
     <div>
         
-        <label for="infor">Informativas</label>
-        <input type="checkbox" id="infor" name="infor">
+        <label for="eduinfo">Informativas</label>
+        <input type="radio" id="infor" name="eduinfo">
         
     </div>
     
